@@ -9,5 +9,4 @@ class AuthentificationView(TemplateView):
 
 
     
-=======
->>>>>>> 927e675094a834d9af1ed681d00a8426f35fb38e
+
