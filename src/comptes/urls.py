@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from django.urls import path
 from .views import *
 
@@ -5,3 +6,4 @@ from .views import *
 urlpatterns = [
     path('connexion/', AuthentificationView.as_view(), name="connexion" )
 ]
+
