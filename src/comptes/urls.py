@@ -1,6 +1,7 @@
 from django.urls import path
-from comptes.views import login_view
+from .views import *
 
-urlpatterns = [    
-   path('', login_view, name="login"),
+
+urlpatterns = [
+    path('connexion/', AuthentificationView.as_view(), name="connexion" )
 ]

@@ -1,6 +1,10 @@
 from django.shortcuts import render
+from django.views.generic import TemplateView
 
 # Create your views here.
 
-def login_view(request):
-    return render(request, 'comptes/interface_Auth.html')
+class AuthentificationView(TemplateView):
+    template_name = "comptes/pages/Auth.html"
+
+
+    
