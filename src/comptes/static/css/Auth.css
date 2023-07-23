@@ -10,7 +10,7 @@
 }
 
 body {
-    background-image: url("{% static 'images/images2.jpg' %}");
+    background-image: url("{% static 'img/images2.jpg' %}");
     background-size: cover;
 }
 
