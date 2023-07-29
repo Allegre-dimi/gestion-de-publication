@@ -1,17 +1,18 @@
-{% load static %}
-
+{% load socialaccount %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'fontawesome/css/all.min.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    {% load static %}
     <link rel="stylesheet" href="{% static 'css/Auth.css' %}">
+   
     <title>S'authentifier</title>
 </head>
 <body>
-    <form action="" method="POST">
+    <form action="." method="POST">
         {% csrf_token %}
         <div class="contenair">
             <div class="box">
@@ -36,6 +37,12 @@
                     <span><a href="#">Inscrivez-vous</a></span>
                     <span><a href="#">Mot de passe oublié ?</a></span>
                 </div>
+
+                <div class="google" style="display: flex; gap: 10px; align-items: baseline; position: relative; background: #cc4444; padding: 8px 16px; border-radius: 50px; margin-top: 15px;">
+                    <span style="width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 50%; padding: 4px;"><i class="fa-brands fa-google" style="position: relative; left: 0; color: #cc4444;"></i></span>
+                    <a href="{% provider_login_url 'google' %}" style="color: white; text-decoration: none; font-size: 17px;">Se connecter avec Google</a>
+                </div>             
+                
             </div>
             <div class="wrapper"></div>
         </div>
