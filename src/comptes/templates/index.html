@@ -3,8 +3,10 @@
 {% block title %}Accueil{% endblock title %}
 
 {% block content %}
+
+    
     {% if user.is_authenticated %}
-        <p>Bienvenue, vous êtes connecté en temps que: {{ user.username }} {{ user.email }}</p>
+        <p>Bienvenue, vous êtes connecté en temps que: {{ user.username }} avec adresse email {{ user.email }}</p>
         <a href="{% url 'deconnexion' %}">Déconnecter vous</a>
     {% else %}
         <a href="{% url 'connexion' %}"> Connecter vous</a>
